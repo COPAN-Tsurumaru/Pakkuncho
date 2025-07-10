@@ -11,7 +11,7 @@ h1 {
 }
 
 #gameCanvas {
-  background-color: #000000; /* 黒 */
+  background-color: #6c8e68; /* 黒 */
   border: 4px solid #ff69b4; /* ホットピンク */
   display: block;
   margin: 20px auto;
