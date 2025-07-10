@@ -25,7 +25,7 @@ function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   // Draw dots
-  ctx.fillStyle = #6c3524;
+  ctx.fillStyle = #602d1d;
   dots.forEach(dot => {
     ctx.beginPath();
     ctx.arc(dot.x * gridSize + gridSize / 2, dot.y * gridSize + gridSize / 2, 4, 0, Math.PI * 2);
