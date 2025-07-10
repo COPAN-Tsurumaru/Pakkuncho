@@ -21,3 +21,9 @@ h1 {
   font-size: 1.4em;
   color: #333333; /* 濃いグレー */
 }
+
+#message {
+  font-size: 1.2em;
+  color: #ff0000; /* 赤い文字で目立たせる */
+  margin-top: 10px;
+}
