@@ -64,7 +64,7 @@ function gameLoop() {
 
   // Check collision with ghost
   if (pacman.x === ghost.x && pacman.y === ghost.y) {
-    alert("ゲームオーバー！スコア: " + score);
+    alert("げーむお〜ば〜！すこあ: " + score);
     pacman = { x: 1, y: 1 };
     ghost = { x: 8, y: 8 };
     score = 0;
