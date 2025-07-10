@@ -58,12 +58,15 @@ function moveGhost() {
   }
 }
 
+const messageDisplay = document.getElementById("message"); // ← 追加
+
 function gameLoop() {
   moveGhost();
   draw();
 
   if (pacman.x === ghost.x && pacman.y === ghost.y) {
-    alert("げ〜むお〜ば〜！🍫すこあ🍫: " + score);
+    // alert("げ〜むお〜ば〜！🍫すこあ🍫: " + score);
+    messageDisplay.textContent("げ〜むお〜ば〜！🍫すこあ🍫: " + score);
     pacman = { x: 1, y: 1 };
     ghost = { x: 8, y: 8 };
     score = 0;
