@@ -41,7 +41,7 @@ function draw() {
   ctx.fill();
 
   // ゴースト
-  ctx.fillStyle = "#ffc0cb"; // 赤
+  ctx.fillStyle = "#ff0000"; // 赤
   ctx.beginPath();
   ctx.arc(ghost.x * gridSize + gridSize / 2, ghost.y * gridSize + gridSize / 2, 12, 0, Math.PI * 2);
   ctx.fill();
