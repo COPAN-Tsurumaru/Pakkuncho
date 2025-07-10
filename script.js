@@ -25,7 +25,7 @@ function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   // Draw dots
-  ctx.fillStyle = "#6C3524";
+  ctx.fillStyle = "#6c3524";
   dots.forEach(dot => {
     ctx.beginPath();
     ctx.arc(dot.x * gridSize + gridSize / 2, dot.y * gridSize + gridSize / 2, 4, 0, Math.PI * 2);
@@ -33,14 +33,14 @@ function draw() {
   });
 
   // Draw Pacman
-  ctx.fillStyle = #FCE2C4;
+  ctx.fillStyle = "#fce2c4";
   ctx.beginPath();
   ctx.arc(pacman.x * gridSize + gridSize / 2, pacman.y * gridSize + gridSize / 2, 12, 0.25 * Math.PI, 1.75 * Math.PI);
   ctx.lineTo(pacman.x * gridSize + gridSize / 2, pacman.y * gridSize + gridSize / 2);
   ctx.fill();
 
   // Draw ghost
-  ctx.fillStyle = #FF0000;
+  ctx.fillStyle = "#ff0000";
   ctx.beginPath();
   ctx.arc(ghost.x * gridSize + gridSize / 2, ghost.y * gridSize + gridSize / 2, 12, 0, Math.PI * 2);
   ctx.fill();
