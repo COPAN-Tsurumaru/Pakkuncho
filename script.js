@@ -45,7 +45,7 @@ function draw() {
   ctx.arc(ghost.x * gridSize + gridSize / 2, ghost.y * gridSize + gridSize / 2, 12, 0, Math.PI * 2);
   ctx.fill();
 
-  scoreDisplay.textContent = "スコア: " + score;
+  scoreDisplay.textContent = "すこあ: " + score;
 }
 
 function moveGhost() {
