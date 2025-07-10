@@ -1,4 +1,5 @@
 const canvas = document.getElementById('gameCanvas');
+const messageDisplay = document.getElementById("message"); // ← 追加
 const ctx = canvas.getContext('2d');
 const gridSize = 32;
 const tileCount = 10;
@@ -58,7 +59,7 @@ function moveGhost() {
   }
 }
 
-const messageDisplay = document.getElementById("message"); // ← 追加
+// const messageDisplay = document.getElementById("message"); // ← 追加
 
 function gameLoop() {
   moveGhost();
