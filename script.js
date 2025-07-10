@@ -24,28 +24,28 @@ function initDots() {
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  // Draw dots
-  ctx.fillStyle = #602d1d;
+  // ドット
+  ctx.fillStyle = "#ffffff"; // 白
   dots.forEach(dot => {
     ctx.beginPath();
     ctx.arc(dot.x * gridSize + gridSize / 2, dot.y * gridSize + gridSize / 2, 4, 0, Math.PI * 2);
     ctx.fill();
   });
 
-  // Draw Pacman
-  ctx.fillStyle = #fce2c4;
+  // パックマン
+  ctx.fillStyle = "#ffff00"; // 黄色
   ctx.beginPath();
   ctx.arc(pacman.x * gridSize + gridSize / 2, pacman.y * gridSize + gridSize / 2, 12, 0.25 * Math.PI, 1.75 * Math.PI);
   ctx.lineTo(pacman.x * gridSize + gridSize / 2, pacman.y * gridSize + gridSize / 2);
   ctx.fill();
 
-  // Draw ghost
-  ctx.fillStyle = #ff0000;
+  // ゴースト
+  ctx.fillStyle = "#ffc0cb"; // ピンク
   ctx.beginPath();
   ctx.arc(ghost.x * gridSize + gridSize / 2, ghost.y * gridSize + gridSize / 2, 12, 0, Math.PI * 2);
   ctx.fill();
 
-  scoreDisplay.textContent = "すこあ: " + score;
+  scoreDisplay.textContent = "🍫すこあ🍫: " + score;
 }
 
 function moveGhost() {
@@ -62,16 +62,14 @@ function gameLoop() {
   moveGhost();
   draw();
 
-  // Check collision with ghost
   if (pacman.x === ghost.x && pacman.y === ghost.y) {
-    alert("げーむお〜ば〜！すこあ: " + score);
+    alert("げ〜むお〜ば〜！🍫すこあ🍫: " + score);
     pacman = { x: 1, y: 1 };
     ghost = { x: 8, y: 8 };
     score = 0;
     initDots();
   }
 
-  // Eat dot
   dots = dots.filter(dot => {
     if (dot.x === pacman.x && dot.y === pacman.y) {
       score += 10;
