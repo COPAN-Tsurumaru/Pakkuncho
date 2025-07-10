@@ -26,7 +26,7 @@ function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   // ドット
-  ctx.fillStyle = "#ffffff"; // 白
+  ctx.fillStyle = "#6c3524"; // チョコ色
   dots.forEach(dot => {
     ctx.beginPath();
     ctx.arc(dot.x * gridSize + gridSize / 2, dot.y * gridSize + gridSize / 2, 4, 0, Math.PI * 2);
@@ -34,14 +34,14 @@ function draw() {
   });
 
   // パックマン
-  ctx.fillStyle = "#ffff00"; // 黄色
+  ctx.fillStyle = "#fce2c4"; // 肌色
   ctx.beginPath();
   ctx.arc(pacman.x * gridSize + gridSize / 2, pacman.y * gridSize + gridSize / 2, 12, 0.25 * Math.PI, 1.75 * Math.PI);
   ctx.lineTo(pacman.x * gridSize + gridSize / 2, pacman.y * gridSize + gridSize / 2);
   ctx.fill();
 
   // ゴースト
-  ctx.fillStyle = "#ffc0cb"; // ピンク
+  ctx.fillStyle = "#ffc0cb"; // 赤
   ctx.beginPath();
   ctx.arc(ghost.x * gridSize + gridSize / 2, ghost.y * gridSize + gridSize / 2, 12, 0, Math.PI * 2);
   ctx.fill();
